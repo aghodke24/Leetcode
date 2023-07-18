@@ -1,0 +1,19 @@
+class Solution {
+    public int reverse(int x) {
+        int number;
+        long reverse=0;
+        int rem;
+        
+        while(x!=0)
+        {
+            rem=x%10;
+            reverse=reverse*10+rem;
+            x=x/10;
+        }
+        if(reverse<Math.pow(-2,31) || reverse>Math.pow(2,31))
+        return 0;
+        else 
+        return (int)reverse;
+
+    }
+}
